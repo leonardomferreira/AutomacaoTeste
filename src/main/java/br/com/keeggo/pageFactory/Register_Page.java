@@ -147,6 +147,24 @@ WebDriver driver;
         Wait.untilJqueryIsDone(driver);
 
     }
+    public void RegisterFail() {
+    	enter_UserName("leonardow99");
+        enter_Email("leonardoferreiraw@hotmail.com");
+        enter_Password("Teste@1234");
+        enter_ConfirmPassword("Teste@1234");
+        enter_FirstName("Leonardo");
+        enter_LastName("Ferreira");
+        enter_PhoneNumber("11951978296");
+        enter_Country("Brazil");
+        enter_City("Osasco");
+        enter_Address("Rua Alto Alegre");
+        enter_State("São Paulo");
+        enter_PostalCode("06223070@#$#");
+        accept_Terms();
+        click_Register();
+        
+		Wait.untilJqueryIsDone(driver);
+    }
     public void validaRegisto() {
 		assertTrue(btn_Login.isDisplayed());
 		

@@ -45,6 +45,20 @@ public class RegisterPageSteps {
 		System.out.println("usuario registrado");
 	}
 	
+	@When("^Usuario peencher os campos com dados invalidos$")
+	public void usuario_peencher_os_campos_com_dados_invalidos() throws Throwable {
+		Reporter.addStepLog("Preenchendo os campos");
+		registerPage.RegisterFail();
+
+		
+
+	}
+	@Then("^Usuario nao sera registrado$")
+	public void usuario_nao_sera_registrado() throws Throwable {
+		System.out.println("usuario nao registrado");
+		assertEquals("https://www.advantageonlineshopping.com/#/register", driver.getCurrentUrl());
+	}
+	
 
 
 }

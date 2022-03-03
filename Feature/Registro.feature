@@ -9,7 +9,15 @@ Scenario: Sucesso ao registrar usuario
 	And Usuario peencher os campos com dados validos
 	Then Usuario sera registrado com sucesso
 	
- @Login @02
+@RegisterTest @02
+Scenario: Falha ao registrar usuario 
+	Given Usuario esteja na pagina inicial
+	When Usuario navegar para a pagina de Login
+	And Usuario clicar no botao criar nova conta
+	And Usuario peencher os campos com dados invalidos 
+	Then Usuario nao sera registrado
+	
+ @Login @03
  Scenario: sucesso ao realizar o login
   Given Usuario esteja na pagina inicial
 	When Usuario navegar para a pagina de Login

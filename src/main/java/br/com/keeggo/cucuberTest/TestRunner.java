@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions (features = "Feature", 
 	glue = { "br.com.keeggo.stepDefinitions" }, 
-	tags = {"@03"},
+	tags = {"@02"},
 	plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" },
 	monochrome = true
 )
